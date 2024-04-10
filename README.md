@@ -14,19 +14,36 @@ TO-DO
 3) usar el token de respuesta como autenticacion de GetUserInformation
 4) Refactor - organizar en paquetes/modularizar.
 
+### v0.2
+FEATURES:
+1) Endpoint CreateUser. El servicio externo es un stub.
+2) Endpoint Login que retorna accessToken para uso de la plataforma.
+3) Endpoint getMe, con Authorization via token, devuelve el usuario que hace el llamado.
+
+TO-DO
+1) Consumir el servicio PLD especifico
+
+NICE-TO-HAVE
+1) Mejorar el logging de la plataforma.
+2) Mejorar el objeto Token
+    - que tenga una expiracion temporal desde que se crea por seguridad
+    - upgradear a JWT
+3) Proveer usuarios iniciales 
+
 [![Unit Tests](https://github.com/fedemiodo/ToDoWebApplication/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/fedemiodo/ToDoWebApplication/actions/workflows/unit-tests.yml/badge.svg)
 [![Coverage Status](https://codecov.io/github/fedemiodo/ToDoWebApplication/coverage.svg?branch=release-candidate)](https://codecov.io/gh/fedemiodo/ToDoWebApplication/branch/release-candidate)
 [![Group loading check](https://github.com/fedemiodo/ToDoWebApplication/actions/workflows/loading-groups.yml/badge.svg)](https://github.com/fedemiodo/ToDoWebApplication/actions/workflows/loading-groups.yml)
 [![Markdown Lint](https://github.com/fedemiodo/ToDoWebApplication/actions/workflows/markdown-lint.yml/badge.svg)](https://github.com/fedemiodo/ToDoWebApplication/actions/workflows/markdown-lint.yml)
+[![Go Reference](https://pkg.go.dev/badge/github.com/go-chi/render.svg)](https://pkg.go.dev/github.com/go-chi/render)
 
-[![GitHub release](https://img.shields.io/github/release/fedemiodo/ToDoWebApplication.svg)](https://github.com/fedemiodo/ToDoWebApplication/releases/latest)
+[![GitHub release](https://img.shields.io/github/release/fedemiodo/ToDoWebApplication.svg)](https://github.com/fedemiodo/Crabi-code-challenge/releases/latest)
 
 Quick links
 
 - [**Explore the docs**](docs/)
 - [Report a defect](https://github.com/fedemiodo/ToDoWebApplication/issues/new?labels=Type%3A+Defect)
 - [Request a feature](https://github.com/fedemiodo/ToDoWebApplication/issues/new?labels=Type%3A+Feature)
-[![Go Reference](https://pkg.go.dev/badge/github.com/go-chi/render.svg)](https://pkg.go.dev/github.com/go-chi/render)
+
 
 
 ## License
