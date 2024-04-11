@@ -13,6 +13,7 @@ import (
 
 func Handler(r *chi.Mux) {
 	r.Route("/users", func(r chi.Router) {
+		r.Use(middleware.Logger)
 		r.Use(middleware.AllowContentType("application/json"))
 		r.Post("/login", requestLogin)
 		r.Post("/createNewUser", requestCreateNewUser)
@@ -27,21 +28,23 @@ func requestCreateNewUser(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	user := data.User
-	if isUserWhitelisted, err := providers.ConsumePLDService(user); err != nil {
+	if isUserBlacklisted, err := providers.ConsumePLDService(user); err != nil {
 		// external API call error
 		render.Render(w, r, ErrProvider(err))
-	} else if isUserWhitelisted {
-		// OK
-		model.DbNewUser(user)
-		render.Status(r, http.StatusCreated)
-		if err := render.Render(w, r, UserResponse(user)); err != nil {
-			render.Render(w, r, ErrRender(err))
-			return
-		}
 	} else {
-		// controlled error - blacklisted
-		render.Status(r, http.StatusOK)
-		render.Render(w, r, unAuthorizedAction(errors.New("user not compliant with MLP Services")))
+		switch isUserBlacklisted {
+		case true:
+			render.Status(r, http.StatusBadRequest)
+			render.Render(w, r, ErrUnAuthorizedAction(errors.New("cannot create user not complying to PLD standards")))
+		//render.Render(w, r, ErrInvalidRequest(err))
+		case false:
+			model.DbNewUser(user)
+			render.Status(r, http.StatusCreated)
+			if err := render.Render(w, r, UserResponse(user)); err != nil {
+				render.Render(w, r, ErrRender(err))
+				return
+			}
+		}
 	}
 }
 

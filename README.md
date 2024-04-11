@@ -30,19 +30,27 @@ NICE-TO-HAVE
     - upgradear a JWT
 3) Proveer usuarios iniciales 
 
-[![Unit Tests](https://github.com/fedemiodo/ToDoWebApplication/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/fedemiodo/ToDoWebApplication/actions/workflows/unit-tests.yml/badge.svg)
-[![Coverage Status](https://codecov.io/github/fedemiodo/ToDoWebApplication/coverage.svg?branch=release-candidate)](https://codecov.io/gh/fedemiodo/ToDoWebApplication/branch/release-candidate)
-[![Group loading check](https://github.com/fedemiodo/ToDoWebApplication/actions/workflows/loading-groups.yml/badge.svg)](https://github.com/fedemiodo/ToDoWebApplication/actions/workflows/loading-groups.yml)
-[![Markdown Lint](https://github.com/fedemiodo/ToDoWebApplication/actions/workflows/markdown-lint.yml/badge.svg)](https://github.com/fedemiodo/ToDoWebApplication/actions/workflows/markdown-lint.yml)
+### v1.0 - MVP
+
+FEATURES:
+1) Endpoint CreateUser con proveedor externo para PLD.
+2) Endpoint Login que retorna accessToken para uso de la plataforma.
+3) Endpoint getMe, con Authorization via token, devuelve el usuario que hace el llamado.
+
+
+[![Unit Tests](https://github.com/fedemiodo/Crabi-code-challenge/actions/workflows/unit-tests.yml/badge.svg)](https://github.com/fedemiodo/Crabi-code-challenge/actions/workflows/unit-tests.yml/badge.svg)
+[![Coverage Status](https://codecov.io/github/fedemiodo/Crabi-code-challenge/coverage.svg?branch=release-candidate)](https://codecov.io/gh/fedemiodo/Crabi-code-challenge/branch/release-candidate)
+[![Group loading check](https://github.com/fedemiodo/Crabi-code-challenge/actions/workflows/loading-groups.yml/badge.svg)](https://github.com/fedemiodo/Crabi-code-challenge/actions/workflows/loading-groups.yml)
+[![Markdown Lint](https://github.com/fedemiodo/Crabi-code-challenge/actions/workflows/markdown-lint.yml/badge.svg)](https://github.com/fedemiodo/Crabi-code-challenge/actions/workflows/markdown-lint.yml)
 [![Go Reference](https://pkg.go.dev/badge/github.com/go-chi/render.svg)](https://pkg.go.dev/github.com/go-chi/render)
 
-[![GitHub release](https://img.shields.io/github/release/fedemiodo/ToDoWebApplication.svg)](https://github.com/fedemiodo/Crabi-code-challenge/releases/latest)
+[![GitHub release](https://img.shields.io/github/release/fedemiodo/Crabi-code-challenge.svg)](https://github.com/fedemiodo/Crabi-code-challenge/releases/latest)
 
 Quick links
 
 - [**Explore the docs**](docs/)
-- [Report a defect](https://github.com/fedemiodo/ToDoWebApplication/issues/new?labels=Type%3A+Defect)
-- [Request a feature](https://github.com/fedemiodo/ToDoWebApplication/issues/new?labels=Type%3A+Feature)
+- [Report a defect](https://github.com/fedemiodo/Crabi-code-challenge/issues/new?labels=Type%3A+Defect)
+- [Request a feature](https://github.com/fedemiodo/Crabi-code-challenge/issues/new?labels=Type%3A+Feature)
 
 
 

@@ -26,6 +26,14 @@ var InvalidUserPass = &ErrResponse{HTTPStatusCode: 403, StatusText: "Invalid use
 
 var ErrTokenNotAllowed = &ErrResponse{HTTPStatusCode: 403, StatusText: "Invalid or expired AccessToken"}
 
+func ErrUnAuthorizedAction(err error) render.Renderer {
+	return &ErrResponse{
+		Err:            err,
+		HTTPStatusCode: 310,
+		StatusText:     "Unauthorized action",
+		ErrorText:      err.Error(),
+	}
+}
 func ErrInvalidRequest(err error) render.Renderer {
 	return &ErrResponse{
 		Err:            err,
@@ -49,15 +57,6 @@ func ErrRender(err error) render.Renderer {
 		Err:            err,
 		HTTPStatusCode: 422,
 		StatusText:     "Error rendering response.",
-		ErrorText:      err.Error(),
-	}
-}
-
-func unAuthorizedAction(err error) render.Renderer {
-	return &ErrResponse{
-		Err:            err,
-		HTTPStatusCode: 310,
-		StatusText:     "Unauthorized action",
 		ErrorText:      err.Error(),
 	}
 }
