@@ -32,6 +32,7 @@ NICE-TO-HAVE
 
 ### v1.0 - MVP
 
+
 FEATURES:
 1) Endpoint CreateUser con proveedor externo para PLD.
 2) Endpoint Login que retorna accessToken para uso de la plataforma.
@@ -62,3 +63,6 @@ Quick links
 
 ## Installation
 
+To install and run the application, go to [![GitHub release](https://img.shields.io/github/release/fedemiodo/Crabi-code-challenge.svg)](https://github.com/fedemiodo/Crabi-code-challenge/releases/latest) and clone the repository. This program requires no additional configuration to run, it's Plug and Play. However, it is always recommended to use a sandbox environment (Sandboxie, Docker) to run external executables as a safety measure.
+
+If unable to run the .exe, the user can also clone the repository, and compile it using Go commands in a console. Having Go installed will then be required: https://go.dev/doc/install
